@@ -1,4 +1,4 @@
-package com.ll.chatApp.domain.chat.chatMessage.entity;
+package com.ll.chatApp.domain.chat.ChatAI.entity;
 
 import com.ll.chatApp.domain.chat.chatRoom.entity.ChatRoom;
 import com.ll.chatApp.global.jpa.BaseEntity;
@@ -17,13 +17,9 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(callSuper = true)
 @NoArgsConstructor
-public class ChatMessage extends BaseEntity {
+public class ChatAIMessage extends BaseEntity {
 
     private String author;
 
     private String content;
-
-    @ManyToOne
-    @JoinColumn(name = "room_id")
-    private ChatRoom chatRoom;
 }
