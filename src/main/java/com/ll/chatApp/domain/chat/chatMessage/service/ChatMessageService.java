@@ -24,15 +24,14 @@ public class ChatMessageService {
     }
 
     // 채팅 출력
-    public ChatMessage createChatMessage(String author, String content,ChatRoom chatRoom) {
+    public void createChatMessage(String author, String content,ChatRoom chatRoom) {
         ChatMessage chatmessage= ChatMessage.builder()
                 .author(author)
                 .content(content)
                 .chatRoom(chatRoom)
                 .build();
 
-        this.chatMessageRepository.save(chatmessage);
-        return chatmessage;
+        chatMessageRepository.save(chatmessage);
     }
 
 }
